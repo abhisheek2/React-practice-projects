@@ -1,33 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <div className='bg-white text-gray-800 flex w-full h-20 m-0 p-0'>
-            <div className='w-1/3 justify-center flex items-center'>
-                <div className='flex items-center justify-center w-full h-full'>
-                    <img src='../src/assets/Logo.png' alt="Logo"  className='w-20'/>
-                </div>
+        <div className='bg-white text-gray-800 flex flex-col md:flex-row w-full h-auto md:h-20 m-0 p-0'>
+            {/* Logo */}
+            <div className='w-full md:w-1/3 justify-between md:justify-center flex items-center px-4 py-3'>
+                <img src='../src/assets/Logo.png' alt='Logo' className='w-16 md:w-20' />
+                <button
+                    className='md:hidden text-gray-800'
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    ☰
+                </button>
             </div>
-            <div className='w-1/3 justify-center flex items-center'>
-                <div className='flex items-center justify-between w-full h-full'>
-                    <div className='flex justify-center items-center w-full h-full '>
-                        <a href="#">Menu</a>
-                    </div>
-                    <div className='flex justify-center items-center w-full h-full '>
-                        <a href="#">Location</a>
-                    </div>
-                    <div className='flex justify-center items-center w-full h-full '>
-                        <a href="#">About</a>
-                    </div>
-                    <div className='flex justify-center items-center w-full h-full '>
-                        <a href="#">Contact</a>
-                    </div>
-                </div>
+
+            {/* Navigation Links */}
+            <div
+                className={`w-full md:w-1/3 flex-col md:flex-row md:flex items-center justify-center transition-all duration-300 ease-in-out ${menuOpen ? 'flex' : 'hidden md:flex'
+                    }`}
+            >
+                <a href="#" className='py-2 md:py-0 px-4 hover:text-red-600'>Menu</a>
+                <a href="#" className='py-2 md:py-0 px-4 hover:text-red-600'>Location</a>
+                <a href="#" className='py-2 md:py-0 px-4 hover:text-red-600'>About</a>
+                <a href="#" className='py-2 md:py-0 px-4 hover:text-red-600'>Contact</a>
             </div>
-            <div className='w-1/3 justify-center flex items-center'>
-                <div className='flex items-center justify-center w-full h-full'>
-                    <button className='bg-red-600 text-white py-2 px-4'>Login</button>
-                </div>
+
+            {/* Login Button */}
+            <div className={`w-full md:w-1/3 flex justify-center items-center px-4 py-3  ${menuOpen ? 'flex' : 'hidden md:flex'} `}>
+                <button className='bg-red-600 text-white py-2 px-4 w-full md:w-auto'>
+                    Login
+                </button>
             </div>
         </div>
     )
