@@ -43,7 +43,7 @@ const Body = () => {
                     <img
                         src="/assets/Shoes.png"
                         alt="Shoes"
-                        className='w-3/4 md:w-full animate-[shrinkBounce_1.5s_ease-in-out_infinite]'
+                        className='w-3/4 md:w-full animate-[shrinkBounce_2.5s_ease-in-out_infinite]'
                     />
                 </div>
             </div>
