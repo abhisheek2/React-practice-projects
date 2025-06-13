@@ -31,8 +31,8 @@ const Body = () => {
                 <div className='w-full my-5 px-4 md:px-11 flex justify-center md:justify-start flex-col items-center md:items-start'>
                     <p className='font-normal text-gray-600'>Also Available On</p>
                     <div className='my-4 flex flex-row items-center gap-6'>
-                        <img src="../src/assets/Flipkart.png" alt="Flipkart" className='w-7' />
-                        <img src="../src/assets/Amazon.png" alt="Amazon" className='w-7' />
+                        <img src="/assets/Flipkart.png" alt="Flipkart" className='w-7' />
+                        <img src="/assets/Amazon.png" alt="Amazon" className='w-7' />
                     </div>
                 </div>
             </div>
@@ -41,9 +41,9 @@ const Body = () => {
             <div className='w-full md:w-1/2 h-full flex justify-center items-center'>
                 <div className='w-full h-full flex justify-center items-center'>
                     <img
-                        src="../src/assets/Shoes.png"
+                        src="/assets/Shoes.png"
                         alt="Shoes"
-                        className='w-3/4 md:w-full animate-[growBounce_1.5s_ease-in-out_infinite]'
+                        className='w-3/4 md:w-full animate-[shrinkBounce_1.5s_ease-in-out_infinite]'
                     />
                 </div>
             </div>

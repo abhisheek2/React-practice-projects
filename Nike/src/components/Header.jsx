@@ -6,7 +6,7 @@ const Header = () => {
         <div className='bg-white text-gray-800 flex flex-col md:flex-row w-full h-auto md:h-20 m-0 p-0'>
             {/* Logo */}
             <div className='w-full md:w-1/3 justify-between md:justify-center flex items-center px-4 py-3'>
-                <img src='../src/assets/Logo.png' alt='Logo' className='w-16 md:w-20' />
+                <img src='./assets/Logo.png' alt='Logo' className='w-16 md:w-20' />
                 <button
                     className='md:hidden text-gray-800'
                     onClick={() => setMenuOpen(!menuOpen)}
